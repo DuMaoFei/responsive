@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>维斗喜帖官网-在线制作漂亮喜帖|请帖|请柬|微信请帖|商务请帖|二维码请柬|微信相册|电子邀请|微信邀请函</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="./bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+          <!-- jQuery -->
+          <script src="./js/jquery-3.4.1.min.js"></script>
+          <!-- Bootstrap JavaScript -->
+          <script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+          <link rel="stylesheet" href="./css/style.css">
+          <script src="./js/index.js"></script>
+          <link rel="icon" href="./img/ms-img2.png">
+    </head>
+    <script>
+            $(function(){
+                $(".bg-img .p-top").addClass('dh');
+                setTimeout(function(){
+                    $(".bg-img .p-bottom").addClass('animat');
+                },1000);
+                
+                $(window).scroll(function(){
+                  if($(this).scrollTop()>0){
+                        $('.my-navbar').addClass(' navbar-fixed-top');
+                        $('.my-navbar').addClass('ms-navbar');
+                        $('.my-navbar-nav>li.after>a').addClass('fonts');
+                        $('.my-navbar-nav>li.font>a').addClass('fontes');
+                        $('.bg-img').css({
+                            "margin-top": "77px"
+                        })
+                  }else{
+                    $('.my-navbar').removeClass(' navbar-fixed-top');
+                    $('.my-navbar').removeClass('ms-navbar');
+                    $('.my-navbar-nav>li.after>a').removeClass('fonts');
+                    $('.my-navbar-nav>li.font>a').removeClass('fontes');
+                    $('.bg-img').css({
+                            "margin-top": "0px"
+                        })
+                  }
+                  function my_md(d,element){
+                      return $(element).eq(d).offset().top-$(window).height();
+                  }
+                   
+                  function my_slide(a,b,c,element,s){
+                    if($(this).scrollTop()>c){
+                        setTimeout(function(){
+                            $(element).eq(a).addClass(s);
+                            },b);
+                  }
+                  }
+                  if($(this).scrollTop()>my_md(0,'.middle-content .my-md')){
+                            $('.middle-content .my-md').eq(0).addClass('slide');
+                  }
+                  my_slide(1,400,my_md(1,'.middle-content .my-md'),'.middle-content .my-md','slide');
+                  my_slide(2,600,my_md(2,'.middle-content .my-md'),'.middle-content .my-md','slide');
+                  my_slide(3,800,my_md(3,'.middle-content .my-md'),'.middle-content .my-md','slide');
+
+                  if($(this).scrollTop()>my_md(0,'.my-row .ms-md')){
+                            $('.my-row .ms-md').eq(0).addClass('slides');
+                  }
+                  my_slide(1,400,my_md(1,'.my-row .ms-md'),'.my-row .ms-md','slides');
+                  my_slide(2,600,my_md(2,'.my-row .ms-md'),'.my-row .ms-md','slides');
+                  my_slide(3,800,my_md(3,'.my-row .ms-md'),'.my-row .ms-md','slides');
+                  
+                  var top1=$('.cont-mid h1 img').offset().top-$(window).height();
+                  if($(this).scrollTop()>top1){
+                      $('.cont-mid h1 img').css({
+                        animation: "dh 0.5s 1 linear",
+                        opacity: 1
+                      })
+                  }
+                
+                  var tops=$('.cont-box .mid-content h2').offset().top-$(window).height();
+                  if($(this).scrollTop()>tops){
+                      $('.cont-box .mid-content h2').css({
+                        animation: "dh 0.5s 1 linear",
+                        opacity: 1
+                      })
+                  }
+
+                  var google_top=$('.img-google').offset().top-$(window).height();
+                  if($(this).scrollTop()>google_top){
+                      $('.img-google').css({
+                        "margin-top": "0px",
+                        opacity: 1
+                      })
+                  }
+
+                  var top2=$('.footer-contact h2').offset().top-$(window).height();
+                  if($(this).scrollTop()>top2){
+                      $('.footer-contact h2').css({
+                        animation: "dh 0.5s 1 linear",
+                        opacity: 1
+                      })
+                  }
+                  var wechat=$('.foot-wechat').offset().top-$(window).height();
+                  if($(this).scrollTop()>wechat){
+                    $('.foot-wechat').css({
+                        opacity: 1
+                    })
+                  }
+                  var input=$('.footer-contact .inputs').eq(2).offset().top-$(window).height();
+                  if($(this).scrollTop()>input){
+                        $('.footer-contact .inputs').eq(0).css({
+                            "transform": "translateX(0)",
+                            opacity: 1
+                        })
+                        $('.footer-contact .inputs').eq(2).css({
+                            "transform": "translateX(0)",
+                            opacity: 1
+                        })
+                        $('.footer-contact  .names').css({
+                            opacity: 1,
+                            "transform": "translateX(0)"
+                        })
+                        $('.footer-contact .leave').css({
+                            opacity: 1,
+                            "transform": "translateX(0)"
+                        })
+                  }
+                  
+                })
+              
+                $('.img-invitation').hover(function(){
+                    $('.img-invitation img').addClass('dh-img');
+                    $('.img-invitation p').addClass('dh-p')
+                },function(){
+                    $('.img-invitation img').removeClass('dh-img');
+                    $('.img-invitation p').removeClass('dh-p')
+                })
+
+                function focus_blur(a,b){
+                    $(a).focus(function(){
+                        if($(a).val()===''){  
+                            $(b).addClass('dh-top').removeClass('dh-botton');
+                            $(b).css({
+                                color:"#fff"
+                            })
+                        }else{
+                            $(b).css({
+                                color:"#fff"
+                            })
+                        }
+                     
+                    })
+                    $(a).blur(function(){
+                        if($(a).val()!=''){
+                            $(b).css({
+                                color:"#a9a9a9"
+                            })
+                        }else{
+                            $(b).removeClass('dh-top').addClass('dh-botton');
+                            $(b).css({
+                                color:"#a9a9a9"
+                            })
+                        }
+                     
+                })
+                }
+                focus_blur('.named','.names');
+                focus_blur('.teled','.tels');
+                focus_blur('.leaved','.leave');
+
+                $('.btns').click(function(){
+                   if($('.named').val()===''){
+                       $('.foot-cont .verify').eq(0).html('*请输入你的姓名.')
+                   }else{
+                    $('.foot-cont .verify').eq(0).html('')
+                   }
+                   if($('.teled').val()===''){
+                       $('.foot-cont .verify').eq(1).html('*请输入手机号码.')
+                   }else{
+                    var reg=/^[1-9][0-9]{10}$/g;
+                    if(reg.test($('.teled').val())){
+                        $('.foot-cont .verify').eq(3).html('');
+                    }else{
+                        $('.foot-cont .verify').eq(1).html('')
+                        $('.foot-cont .verify').eq(3).html('x 汗！这号码能收到短信吗.');
+                    }
+                   }
+                   if($('.leaved').val()===''){
+                       $('.foot-cont .verify').eq(2).html('* 请描述你的需求.')
+                   }else{
+                        $('.foot-cont .verify').eq(2).html('')
+                   }
+                })
+
+            })
+    </script>
+    <body>
+           
+        <header>
+                <nav class="navbar navbar-default my-navbar  ">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand visible-xs-inline-block" href="#">
+                                <img alt="Brand" src="./img/logo-801c4c920fd56386e8993df70d861ad3e9ed900d0f5eaa348e1f223c79e8c9ed.png">
+                        </a>
+                </div>
+                          <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav  my-navbar-nav">
+                                <li class="after"><a href="#">登录</a></li>
+                                <li class="after"><a href="#">模板</a></li>
+                                <li class="font hidden-xs"><a href="#">喜 <span>帖</span></a></li>
+                                <li class="after"><a href="#">案例</a></li>
+                                <li class="after"><a href="javascript:;">教程</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                    </nav>
+              <div class="bg-img text-center">
+
+                  <div class="p-top">
+                        <p class="one">Hey，欢迎使用维斗喜帖</p>
+                        <p class="two">诗歌，文章，相册，<br /> 微喜帖，邀请函！</p>
+                  </div>
+                  <div class="p-bottom">
+                        <p class="three">只需三步：1.登录/注册 --> 2.选择模板 --> 3.开始制作</p>
+                        <p class="four"><a href="#">马上制作</a></p>
+                  </div>
+              </div>
+        </header>
+        <section>
+            <div class="top-bg"></div>
+            <div class="middle-content">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-sm-6 col-md-3 my-md">
+                              <div class="thumbnail my-thumbnail">
+                              <img src="./img/my-img1.png" alt="...">
+                              <div class="caption text-center">
+                                  <p class="font-bottom">漂亮的微信请柬，同样适用于百日宴请帖、生日请帖、微企邀请函。</p>
+                                  <p><a href="#" class="btn  my-btn" role="button">我要制作</a></p>
+                              </div>
+                              </div>
+                          </div>
+                          <div class="col-sm-6 col-md-3 my-md">
+                                  <div class="thumbnail my-thumbnail">
+                                  <img src="./img/my-ing.png" alt="...">
+                                  <div class="caption text-center">
+                                      <p class="font-bottom">创建时尚的微相册，婚纱微相册、宝宝微相册、活动相册、旅游微相册。</p>
+                                      <p><a href="#" class="btn  my-btn" role="button">我要制作</a></p>
+                                  </div>
+                                  </div>
+                              </div>
+                          <div class="col-sm-6 col-md-3 my-md">
+                                  <div class="thumbnail my-thumbnail">
+                                  <img src="./img/sermy-img.png" alt="...">
+                                  <div class="caption text-center">
+                                      <p class="font-bottom">个性化微杂志，可分享到微信/QQ/微博等，借助于社会化媒体传播。</p>
+                                      <p><a href="#" class="btn  my-btn" role="button">我要制作</a></p>
+                                  </div>
+                                  </div>
+                              </div>
+                          <div class="col-sm-6 col-md-3 my-md">
+                                  <div class="thumbnail my-thumbnail">
+                                  <img src="./img/my-img2.png" alt="...">
+                                  <div class="caption text-center">
+                                      <p class="font-bottom">引爆朋友圈的利器，企业商户微宣传的高效自传播渠道，移动你的生意。</p>
+                                      <p><a href="#" class="btn  my-btn" role="button">发布到公众号</a></p>
+                                  </div>
+                                  </div>
+                              </div>
+                      </div>
+                      <div class="cont-mid text-center">
+                          <h1><img src="./img/logo-801c4c920fd56386e8993df70d861ad3e9ed900d0f5eaa348e1f223c79e8c9ed.png" alt=""></h1>
+                          <p>维斗喜帖网是一个微场景应用开发平台，我们通过简单直观的操作步骤，丰富多样的模版，为广大客户提供各方面的微应用，包括电子喜帖，微邀请，微相册，微杂志，微网站，企业微场景等。</p>
+                          <p><strong>制作个人应用:</strong> 结婚、生日宴、活动Party、个人相册。</p>
+                          <p><strong>制作商务英语：</strong>产品宣传、店庆、品牌/形象展示、活动邀请、合作代理、公共号接通微场景。</p>
+                      </div>
+                      <div class="row my-row">
+                      <div class="col-sm-6 col-md-3  ms-md">
+                        <div class="thumbnail ms-thumbnail">
+                          <img src="./img/ms-img.png" alt="">
+                          <div class="caption text-center">
+                            <h3>操作简单方便</h3>
+                            <p>轻，用最直接的方式呈现最震撼的内容；让请帖在最需要的那一刻美丽绽放.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-3 ms-md">
+                              <div class="thumbnail ms-thumbnail">
+                                <img src="./img/ms-img1.png" alt="">
+                                <div class="caption text-center">
+                                  <h3>基于云计算架构</h3>
+                                  <p>维斗喜帖采用云计算+云存储服务，即安全，又能保障应用快速传递和高负载访问.</p>
+                                </div>
+                              </div>
+                            </div>
+                      <div class="col-sm-6 col-md-3  ms-md">
+                          <div class="thumbnail ms-thumbnail">
+                              <img src="./img/ms-img2.png" alt="">
+                              <div class="caption text-center">
+                              <h3>传递喜庆和祝福</h3>
+                              <p>为客户制造几分钟喜悦的场景，通过微信请帖、QQ请帖、手机请帖，将你的喜悦传递.</p>
+                              </div>
+                          </div>
+                          </div>
+                      <div class="col-sm-6 col-md-3  ms-md">
+                          <div class="thumbnail ms-thumbnail">
+                              <img src="./img/ms-img3.png" alt="">
+                              <div class="caption text-center">
+                              <h3>针对高端用户</h3>
+                              <p>实质，就是在这短短几分钟时间内牢牢抓住用户.</p>
+                              </div>
+                          </div>
+                          </div>
+                    </div>
+                    <div class="cont-box hidden-xs text-center">
+                      <div class="mid-content">
+                          <h2>如何制作</h2>
+                          <p class="mid-text">你只需要准备相关的素材（文章／图片／设计），选择合适的背景音乐；</p>
+                          <p class="mid-text">在模板中挑选一个中意的喜帖模板，免注册，三步完成制作，过程不到5分钟。</p>
+                          <p class="box-btn"><a href="javascript:;">查看教程</a></p>
+                      </div>
+                      <div class="img-google">
+                          <img src="./img/chrome-top.png" alt="">
+                          <div class="img-invitation">
+                              <img src="./img/box-img.png" alt="">
+                              <p>制作教程<span class="glyphicon glyphicon-arrow-right"></span></p>
+                          </div>
+                      </div>
+                    </div>
+                  </div> 
+            </div>
+        </section>
+        <footer>
+            <div class="footer-contact">
+                <div class="container">
+                    <div class="foot-cont text-center">
+                            <h2>联系我们</h2>
+                            <p>维斗喜帖<span>®</span>为你提供高大上的微信喜帖、电子请柬、微杂志、微相册制作服务.</p>
+                            <p>我们采用最先进的技术，精心研究微应用场景，帮助你引爆朋友圈.</p>
+                            <form action="#">
+                                <label class="names">姓名</label><input type="text" class="inputs named">
+                                <label class="tels">手机</label><input type="tel" class="inputs teled">
+                                <label class="leave">留言</label><textarea class="inputs leaved "></textarea>
+                                
+                            </form>
+                            <span class="verify"></span>
+                            <span class="verify"></span>
+                            <span class="verify"></span>
+                            <span class="verify"></span>
+                            <p class="btns">发送留言</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-wechat">
+                <div class="container">
+                    <div class="foot-wechat text-center">
+                        <img src="./img/qrcode-wedxt-72fe105beceb68a96c3c74a201c4957b6a875cddba5a4ae974b95b6e5ee46ca8.jpg" alt="">
+                        <p>关注微信公共号: <span>[维斗喜帖]</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container text-center">
+                    <img src="./img/anquan-68dcd539c86c0414734009a0d23be9744467ab3b8f8c026f3ec04c1d82373066.jpg" class="img-responsive my-responsive" alt="">
+                    <p><strong>地址 : </strong> 成都市二环路东二段龙湖三千星座A座2801号  &nbsp; <strong>邮编 : </strong> 610000 </p>
+                    <p>©维斗喜帖-版权所有. 微喜帖/微相册/微杂志/微邀请. <a href="#">探码科技出品</a> . 备案号: <a href="#">蜀ICP备15035023号-9</a>版权归<a href="#">探码科技</a>所有。</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
